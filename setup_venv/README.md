@@ -14,7 +14,7 @@ export CPATH=$CUDA_ROOT/include:$CPATH
 export LD_LIBRARY_PATH=$CUDA_ROOT/lib64:$LD_LIBRARY_PATH
 
 # replace AT_CHECK with TORCH_CHECK
-find mmdet -name "*.cpp" | while read -r file; sed -i "${file}" -e "s/AT_CHECK/TORCH_CHECK/g"; done
+find mmdet -name "*.cpp" | while read -r file; do sed -i "${file}" -e "s/AT_CHECK/TORCH_CHECK/g"; done
 
 # make
 cd setup_venv
