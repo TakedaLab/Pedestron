@@ -89,6 +89,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+setup_venv/*.done
+setup_venv/miniconda.sh
+setup_venv/activate_python.sh
 
 # Spyder project settings
 .spyderproject
