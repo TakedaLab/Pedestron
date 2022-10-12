@@ -34,7 +34,6 @@ mmcv.done: pytorch.done
 	touch mmcv.done
 
 library.done: mmcv.done
-	cd ../ && shell find mmdet -name "*.cpp" | while read -r file; do echo ${file}; sed -i ${file} -e "s/AT_CHECK/TORCH_CHECK/g"; done
 	. ./activate_python.sh && cd ../ && pip install Cython
 	. ./activate_python.sh && cd ../ \
 		&& TORCH_CUDA_ARCH_LIST="$(TORCH_CUDA_ARCH_LIST)" FORCE_CUDA=1 pip install --no-cache-dir -e .
