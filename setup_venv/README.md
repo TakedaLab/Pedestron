@@ -3,6 +3,7 @@
 ```bash
 # clone
 git clone git@github.com:TakedaLab/Pedestron.git
+cd Pedestron
 
 # export cuda related path
 export CUDA_ROOT=/usr/local/cuda-11.0
